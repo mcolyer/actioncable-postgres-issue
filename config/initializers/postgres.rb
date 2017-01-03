@@ -17,10 +17,10 @@ ActiveRecord::ConnectionAdapters::AbstractAdapter.class_eval do
   end
 
   def log_after_checkout
-    #puts "--------------------------------------------------------------------------------"
-    #puts connection_info_for_logging
-    #puts caller
-    #puts "================================================================================"
-    logger.debug { "#{self.class.name.demodulize}##{__method__}, #{connection_info_for_logging}" } if logger && ActiveRecord::Base.connected?
+    puts "--------------------------------------------------------------------------------"
+    puts connection_info_for_logging
+    puts caller
+    puts "================================================================================"
+    #logger.debug { "#{self.class.name.demodulize}##{__method__}, #{connection_info_for_logging}" } if logger && ActiveRecord::Base.connected?
   end
 end
